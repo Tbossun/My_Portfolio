@@ -29,14 +29,15 @@ const Home = () => {
         }, 4000)
       }, [])
     return (
+      <>
         <div className="container home-page">
             <div className="text-zone">
                 <h1>
                 <span className={letterClass}>H</span> 
-                <span className={'${letterClass} _12'}>i,</span>    
+                <span className={`${letterClass} _12`}>i,</span>    
                 < br/>
-                <span className={'${letterClass} _13'}>I</span> 
-                <span className={'${letterClass} _14'}>'m</span> 
+                <span className={`${letterClass} _13`}>I</span> 
+                <span className={`${letterClass} _14`}>'m</span> 
                 <img src={LogoTitle} alt="Developer" />
                 <AnimatedLetters letterClass={letterClass}
                 strArray={nameArray}
@@ -50,6 +51,7 @@ const Home = () => {
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>
         </div>
+      </>
     );
 }
 
