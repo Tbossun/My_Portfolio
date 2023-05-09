@@ -13,16 +13,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  const [letterClass, setLetterClass] = useState('text-animate');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    return setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-  }, [])
+    const timeout = setTimeout(() => {
+        setLetterClass('text-animate-hover');
+        setIsLoading(false);
+    }, 4000);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <>
+      {isLoading && <Loader type="pacman" />}
       <div className="container about-page">
         <div className="text-zone">
           <h1>
@@ -65,7 +70,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Loader type="pacman" />
     </>
   )
 }
