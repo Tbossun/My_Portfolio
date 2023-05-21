@@ -42,8 +42,13 @@ const About = () => {
             I am quiet confident, naturally curious, and perpetually working on improving my skills one design problem at a time.
             My ambition and desire to learn and improve drive me, and I am a fast learner who thrives on challenging and diverse projects.
           </p>
-          <p>I am excited about the prospect of contributing my skills and experience to a dynamic team and making a meaningful impact in the industry. To define myself in one sentence, 
+          <p align="LEFT">I am excited about the prospect of contributing my skills and experience to a dynamic team and making a meaningful impact in the industry. To define myself in one sentence, 
             I am a sports fanatic, photography enthusiast, and tech-obsessed individual.</p>
+            <p>
+            If I need to define myself in one sentence that would be a family
+            person, father of a beautiful daughter, a sports fanatic,
+            photography enthusiast, and tech-obsessed!!!
+          </p>
         </div>
 
         <div className="stage-cube-cont">
@@ -70,6 +75,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Loader type="pacman" />
     </>
   )
 }

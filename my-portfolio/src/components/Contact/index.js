@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { useRef } from 'react'
-import emailjs from 'emailjs-com'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 
@@ -24,7 +24,7 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-      .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
+      .sendForm('service_tbzu8tr', 'template_h26bja8', form.current, 'LXJNcaexkUKWj61AX')
       .then(
         () => {
           alert('Message successfully sent!')
@@ -103,7 +103,7 @@ const Contact = () => {
           <MapContainer center={[6.4615, 3.5991]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[6.4615, 3.5991]}>
-              <Popup>Sodiq lives here, come over let's discuss tech:)</Popup>
+              <Popup>Sodiq lives here, come over let's discuss tech: </Popup>
             </Marker>
           </MapContainer>
         </div>
